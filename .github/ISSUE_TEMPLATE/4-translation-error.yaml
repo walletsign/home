@@ -1,0 +1,43 @@
+name: "🚨 Translation Error"
+description: Report wrong, missing, or unclear translations in WalletSign
+title: "[Translation]: "
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Point to the exact location and suggested wording so we can fix it quickly.
+  - type: input
+    id: locale
+    attributes:
+      label: Locale
+      description: Language currently shown (e.g., en, zh-CN, zh-TW).
+      placeholder: e.g., en
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      placeholder: Copy the text shown or from a screenshot
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested text
+      placeholder: Provide the translation you recommend
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong
+      placeholder: e.g., Grammar error / unclear meaning / culturally inappropriate / typo
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or link (optional)
+      description: Screenshot helps us locate it faster.

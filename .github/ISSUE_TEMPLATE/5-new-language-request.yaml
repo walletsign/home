@@ -1,0 +1,28 @@
+name: "🌐 New Language Request"
+description: Request a new UI language for WalletSign
+title: "[New Language]: "
+labels: ["i18n"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share the target language and a bit of context so we can evaluate and schedule it.
+  - type: input
+    id: language
+    attributes:
+      label: Target language
+      placeholder: e.g., German / Portuguese (Brazil)
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Language code
+      description: Language/locale code if known.
+      placeholder: e.g., de / pt-BR / fr-CA
+  - type: input
+    id: reference
+    attributes:
+      label: Recommended link
+      description: Optional link about the language/region (e.g., Wikipedia or cultural overview).
+      placeholder: https://...

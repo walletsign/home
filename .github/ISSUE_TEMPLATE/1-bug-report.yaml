@@ -1,0 +1,69 @@
+name: "🐞 Bug Report"
+description: Report a bug or unexpected behavior in WalletSign
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report! Fill in the details below to help us reproduce and fix the issue quickly.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Issue summary
+      description: Brief description or error message.
+      placeholder: e.g., Sign button stays disabled and shows "network unavailable"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List steps in order.
+      placeholder: |
+        1. Open...
+        2. Click...
+        3. See...
+    validations:
+      required: true
+  - type: input
+    id: chain
+    attributes:
+      label: Chain / network
+      description: Chain you used.
+      placeholder: e.g., Ethereum / BTC / Solana / Tron / Sui
+    validations:
+      required: true
+  - type: textarea
+    id: wallet
+    attributes:
+      label: Wallet / connector
+      description: Wallet app or browser extension and version (e.g., MetaMask 12.1, OKX, TokenPocket, TronLink, Suiet, Phantom).
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: Message or payload (if relevant)
+      description: Include the text you tried to sign/verify (safe content only) if it impacts the issue.
+      placeholder: e.g., "hello WalletSign" / sample payload
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      placeholder: e.g., Should open the signature window with the correct network selected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Attach screenshots or recordings if possible.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser and OS.
+      placeholder: e.g., Chrome 120 / macOS 14.1

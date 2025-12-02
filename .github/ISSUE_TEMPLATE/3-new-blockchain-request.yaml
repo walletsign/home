@@ -1,0 +1,57 @@
+name: "✨ New Blockchain Support Request"
+description: Ask WalletSign to support a new chain or network
+title: "[New Chain]: "
+labels: ["blockchain-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide chain parameters so we can verify and integrate.
+  - type: input
+    id: chain
+    attributes:
+      label: Chain / network name
+      placeholder: e.g., Linea / BSC
+    validations:
+      required: true
+  - type: input
+    id: explorer
+    attributes:
+      label: Block explorer (optional)
+      placeholder: e.g., https://explorer.linea.build/
+  - type: textarea
+    id: wallets
+    attributes:
+      label: Common wallets/providers
+      placeholder: e.g., MetaMask/WalletConnect (EVM), Phantom (Solana), TronLink, Suiet
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why this chain is needed
+      description: Use cases, target users, integrations, or partners that depend on it.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        **Optional: sample signature (helps us validate)**
+  - type: input
+    id: sample_address
+    attributes:
+      label: Address
+      placeholder: e.g., 0x... / bc1...
+  - type: textarea
+    id: sample_message
+    attributes:
+      label: Message
+      placeholder: Text that was signed
+  - type: textarea
+    id: sample_digest
+    attributes:
+      label: Signature / digest
+      placeholder: Signature output
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Security constraints, special signing requirements, or compatibility considerations.
